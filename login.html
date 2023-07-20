@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .login-container h2 {
+            text-align: center;
+        }
+        .login-container label, .login-container input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .login-container input[type="text"], .login-container input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login Form</h2>
+        <form action="#" method="post" onsubmit="return false;">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Login" onclick="login()">
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            // Retrieve values from the form
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Here you can implement your login logic.
+            // For this example, I'm just displaying the entered username and password in the console.
+            console.log('Username: ' + username);
+            console.log('Password: ' + password);
+        }
+    </script>
+</body>
+</html>
